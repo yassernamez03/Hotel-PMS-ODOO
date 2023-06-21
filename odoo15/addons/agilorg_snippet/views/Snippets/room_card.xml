@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="room_card" name="Room Card">
+		<section class="s_media_list pt32 pb32 o_cc o_cc2 o_colored_level" data-snippet="room_card" data-name="Room Card" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip248170">
+			<div class="container">
+				<section class="s_text_image pt32 pb32 o_colored_level" style="background-image: none;">
+					<div class="container">
+						<div class="row align-items-center" data-original-title="" title="" aria-describedby="tooltip641626">
+							<div class="col-lg-6 pt16 pb16 o_colored_level" style="">
+								<section class="s_image_gallery o_slideshow o_colored_level pt0 s_image_gallery_show_indicators s_image_gallery_indicators_rounded s_image_gallery_indicators_arrows_rounded" data-vcss="001" data-columns="3" style="height: 500px; overflow: hidden; background-image: none;">
+									<div class="o_container_small">
+										<div id="slideshow_1684758076150" class="carousel slide" data-ride="carousel" data-interval="0" style="margin: 0 12px;">
+											<div class="carousel-inner" style="padding: 0;">
+												<div class="carousel-item" style="min-height: 500px;">
+													<img src="/web/image/website.s_image_text_default_image" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-id="883" data-original-src="/website/static/src/img/snippets_demo/s_image_text.jpg" data-mimetype="image/jpeg" data-original-title="" title="" aria-describedby="tooltip905288"/>
+												</div>
+												<div class="carousel-item" style="min-height: 500px;">
+													<img src="/web/image/website.s_image_text_default_image" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-id="883" data-original-src="/website/static/src/img/snippets_demo/s_image_text.jpg" data-mimetype="image/jpeg" data-original-title="" title="" aria-describedby="tooltip905288"/>
+												</div>
+												<div class="carousel-item active" style="min-height: 500px;">
+													<img src="/web/image/website.s_image_text_default_image" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-id="883" data-original-src="/website/static/src/img/snippets_demo/s_image_text.jpg" data-mimetype="image/jpeg" data-original-title="" title="" aria-describedby="tooltip905288"/>
+												</div>
+											</div>
+											<a class="carousel-control-prev o_we_no_overlay o_not_editable" href="#slideshow_1684758076150" data-slide="prev" aria-label="Previous" title="Previous" contenteditable="false">
+												<span class="fa fa-chevron-left fa-2x text-white" contenteditable="false"></span>
+												<span class="sr-only o_default_snippet_text">
+													Previous
+												</span>
+											</a>
+											<a class="carousel-control-next o_we_no_overlay o_not_editable" href="#slideshow_1684758076150" data-slide="next" aria-label="Next" title="Next" contenteditable="false">
+												<span class="fa fa-chevron-right fa-2x text-white" contenteditable="false" data-original-title="" title="" aria-describedby="tooltip458516"></span>
+												<span class="sr-only o_default_snippet_text">
+													Next
+												</span>
+											</a>
+										</div>
+									</div>
+								</section>
+							</div>
+							<div class="pt16 pb16 o_colored_level col-lg-4">
+								<h2 class="o_default_snippet_text">
+									Standard room
+								</h2>
+								<p class="">
+									Nice and cosy overlooking the lush mediterranean garden...
+								</p>
+								<hr contenteditable="false"/>
+								<p class="o_default_snippet_text">
+									Room Features:
+								</p>
+								<hr contenteditable="false"/>
+								<p class="o_default_snippet_text">
+									Max Guests:
+								</p>
+								<hr contenteditable="false"/>
+							</div>
+							<div class="pt16 pb16 o_colored_level col-lg-2" data-quillbot-parent="DoS_Ckyhw23K1BVrOM5Uh">
+								<h2 class="o_default_snippet_text" style="float:right;" >
+									MAD 2500
+								</h2>
+								<p style="float:right;font-size:19px;" class="">
+									Per night
+									<br/>
+									Pre taxes
+								</p>
+								<a href="#" type="button" class="s_donation_donate_btn btn btn-secondary btn-lg mb-2 o_default_snippet_text">
+									BOOK NOW
+								</a>
+							<quillbot-extension data-element-id="DoS_Ckyhw23K1BVrOM5Uh" style="position: absolute; top: 0px; left: 0px; pointer-events: none;"></quillbot-extension><quillbot-extension-highlights data-element-id="DoS_Ckyhw23K1BVrOM5Uh" data-element-type="html" style="position: absolute; top: 0px; left: 0px; pointer-events: none;"></quillbot-extension-highlights></div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+	</template>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="s_title" name="Title">
+		<section class="s_parallax bg-black-50 o_colored_level parallax  o_half_screen_height" data-scroll-background-ratio="1.05" data-snippet="s_title" data-name="Title" style="background-image: none;">
+			<span class="s_parallax_bg oe_img_bg o_bg_img_center" style="background-image: url(/agilorg_snippet/static/img/showcase.jpg); top: -87.045px; bottom: -87.045px; transform: translateY(-53px);">
+			</span>
+			<div class="o_we_bg_filter bg-black-50">
+			</div>
+			<div class="oe_structure oe_empty" contenteditable="true" data-gramm="false" wt-ignore-input="true">
+				<div class="s_allow_columns container">
+					<h2 style="text-align: center;">
+						<font style="font-size: 50px;" class="">
+							Title
+						</font>
+						<br>
+						</br>
+					</h2>
+				</div>
+			</div>
+		</section>
+	</template>
+</odoo>

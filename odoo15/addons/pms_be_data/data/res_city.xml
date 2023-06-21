@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="res_city_RAK" model="res.city">
+          <field name="code">RAK</field>
+          <field name="name">Marrakech</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_AGA" model="res.city">
+          <field name="code">AGA</field>
+          <field name="name">Agadir</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_FES" model="res.city">
+          <field name="code">FES</field>
+          <field name="name">Fes</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_MEK" model="res.city">
+          <field name="code">MEK</field>
+          <field name="name">Meknes</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_RBT" model="res.city">
+          <field name="code">RBT</field>
+          <field name="name">Rabat</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_CASA" model="res.city">
+          <field name="code">CASA</field>
+          <field name="name">Casablanca</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_TAN" model="res.city">
+          <field name="code">TAN</field>
+          <field name="name">Tanger</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_ESS" model="res.city">
+          <field name="code">ESS</field>
+          <field name="name">Essaouira</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_JDD" model="res.city">
+          <field name="code">JDD</field>
+          <field name="name">Jadida</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_SKRA" model="res.city">
+          <field name="code">SKRA</field>
+          <field name="name">SKRA</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_ZAT" model="res.city">
+          <field name="code">ZAT</field>
+          <field name="name">Ouarzazat</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_ZAG" model="res.city">
+          <field name="code">ZAG</field>
+          <field name="name">Zag</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_OJD" model="res.city">
+          <field name="code">OJD</field>
+          <field name="name">Oujda</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_ERF" model="res.city">
+          <field name="code">ERF</field>
+          <field name="name">Erfoud</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_MERZ" model="res.city">
+          <field name="code">MERZ</field>
+          <field name="name">Merzouga</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_Dades" model="res.city">
+          <field name="code">Dades</field>
+          <field name="name">Dades</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_CHAON" model="res.city">
+          <field name="code">CHAON</field>
+          <field name="name">Chaoun</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_TETN" model="res.city">
+          <field name="code">TETN</field>
+          <field name="name">Tetouan</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_LARH" model="res.city">
+          <field name="code">LARH</field>
+          <field name="name">Laarach</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_TARD" model="res.city">
+          <field name="code">TARD</field>
+          <field name="name">Taroudant</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+
+        <record id="res_city_SAADIA" model="res.city">
+          <field name="code">SAADIA</field>
+          <field name="name">Saidia</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+
+        <record id="res_city_HCM" model="res.city">
+          <field name="code">HCM</field>
+          <field name="name">Houceima</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_OLDA" model="res.city">
+          <field name="code">OLDA</field>
+          <field name="name">OLDA</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_OUALIDIA" model="res.city">
+          <field name="code">OUALIDIA</field>
+          <field name="name">Oualidia</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_AZR" model="res.city">
+          <field name="code">AZR</field>
+          <field name="name">Azrou</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_FZGD" model="res.city">
+          <field name="code">FZGD</field>
+          <field name="name">FZGD</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_TING" model="res.city">
+          <field name="code">TING</field>
+          <field name="name">TING</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_KENI" model="res.city">
+          <field name="code">KENI</field>
+          <field name="name">Kenitra</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_MHA" model="res.city">
+          <field name="code">MHA</field>
+          <field name="name">MHA</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_SIFN" model="res.city">
+          <field name="code">SIFN</field>
+          <field name="name">SIFN</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_TAF" model="res.city">
+          <field name="code">TAF</field>
+          <field name="name">TAF</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_IMCH" model="res.city">
+          <field name="code">IMCH</field>
+          <field name="name">IMCH</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_DADS" model="res.city">
+          <field name="code">DADS</field>
+          <field name="name">DADS</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_IMLI" model="res.city">
+          <field name="code">IMLI</field>
+          <field name="name">IMLI</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_DAKH" model="res.city">
+          <field name="code">DAKH</field>
+          <field name="name">Dakhla</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_NADR" model="res.city">
+          <field name="code">NADR</field>
+          <field name="name">Nador</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_Midelt" model="res.city">
+          <field name="code">Midelt</field>
+          <field name="name">Midelt</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_GTDG" model="res.city">
+          <field name="code">GTDG</field>
+          <field name="name">GTDG</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+        <record id="res_city_MEL" model="res.city">
+          <field name="code">MEL</field>
+          <field name="name">MEL</field>
+          <field ref="base.ma" name="country_id" />
+        </record>
+
+    </data>
+</odoo>

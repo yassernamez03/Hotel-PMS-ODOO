@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="test_snippet" name="my snippet">
+		<section>
+			<div class="main">
+				<div class="custom-calendar-wrap">
+					<div id="custom-inner" class="custom-inner">
+						<div class="custom-header clearfix">
+							<nav>
+								<span id="custom-prev" class="custom-prev">
+								</span>
+								<span id="custom-next" class="custom-next">
+								</span>
+							</nav>
+							<h2 id="custom-month" class="custom-month">
+							</h2>
+							<h3 id="custom-year" class="custom-year">
+							</h3>
+						</div>
+						<div id="calendar" class="fc-calendar-container">
+						</div>
+					</div>
+				</div>
+			</div>
+			<button name="action_button_method_name" type="object" string="ObjectButton"/>
+		</section>
+	</template>
+    <template id="calendar_snippet" inherit_id="website.snippets" name="Calendar">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_calendar.test_snippet" t-thumbnail="/theme_calendar/static/img/logo.png" />
+        </xpath>
+    </template>
+</odoo>

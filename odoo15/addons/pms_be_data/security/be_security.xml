@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+
+    <record id="module_category_pms" model="ir.module.category">
+        <field name="name">PMS</field>
+        <field name="sequence">0</field>
+    </record>
+
+    <!--Group for hotel user -->
+    <record id="group_hotel_be" model="res.groups">
+        <field name="name">Group BE</field>
+        <field name="category_id" ref="module_category_pms"/>
+    </record>
+
+
+</odoo>

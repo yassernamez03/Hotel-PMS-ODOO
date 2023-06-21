@@ -1,0 +1,153 @@
+<odoo>
+        <!--Form view wizard -->
+<!--        ('request', 'Booking Request'),-->
+<!--        ('hotels', 'Available hotels'),-->
+<!--        ('hotel', 'Hotel Selection'),-->
+<!--        ('rooms', 'Available Rooms'),-->
+<!--        ('book', 'Room Booking'),-->
+<!--        ('extra', 'Room Booking'),-->
+<!--        ('confirm','Confirmation'),-->
+<!--        ('payment','Payment'),-->
+<!--        ('done', 'Done'),-->
+<!--    -->
+        <record model="ir.ui.view" id="view_be_reservation_wizard">
+            <field name="name">Booking Engine Simulator</field>
+            <field name="model">be.reservation</field>
+            <field name="arch" type="xml">
+                <form >
+                    <header>
+                         <field
+                            name="state"
+                            widget="statusbar"
+                            statusbar_visible="destination,hotels,hotel,request,rooms,book,extra,confirm,payment,done"
+                            statusbar_colors='{"request":"red","done":"green"}'
+                         />
+                    </header>
+                    <group name="warning_message" attrs="{'invisible' : [('state_warning','!=', True)]}">
+                         <field name="state_warning" invisible="1"/>
+                         <field name="error_message"/>
+                    </group>
+                    <group attrs="{'invisible' : [('state','!=', 'destination')]}">
+                        <group>
+                            <field name="destination" required="1"/>
+                            <field name="checkin_date" widget="daterange" options="{'related_end_date': 'checkout_date'}" required="1"/>
+                            <field name="checkout_date" widget="daterange" options="{'related_start_date': 'checkin_date'}" required="1"/>
+                        </group>
+                    </group>
+                     <group attrs="{'invisible' : [('state','!=', 'hotels')]}">
+                         <group colspan="2">
+                             <field name="be_hotel_id"/>
+                         </group>
+                         <group colspan="4" string="Select Hotel">
+                             <field name="accomodation_ids" widget="many2many_tags"/>
+                        </group>
+                        <group colspan="4" string="Available Rooms" readonly="1">
+                             <field name="rooms" nolabel="1"/>
+                        </group>
+                    </group>
+                     <group attrs="{'invisible' : [('state','!=', 'hotel')]}">
+                         <group colspan="2">
+                              <field name="be_hotel_id"/>
+                         </group>
+                        <group colspan="4" string="Selected Hotel -  Rooms">
+                             <field name="rooms" nolabel="1"/>
+                        </group>
+                    </group>
+
+                    <group attrs="{'invisible' : [('state','!=', 'request')]}">
+                         <group>
+                            <field name="room_number"/>
+                            <field name="selected_room"/>
+                            <field name="selected_occupancy"/>
+                        </group>
+                         <group>
+                            <field name="adults" options='{"type": "number"}'/>
+                            <field name="childs" options='{"type": "number"}'/>
+                            <field name="babies" options='{"type": "number"}'/>
+                        </group>
+                    </group>
+
+                    <group attrs="{'invisible' : [('state','!=', 'rooms')]}">
+                        <group>
+                            <!-- Put some descriptions for selected hotel  -->
+                             <field name="be_hotel_id"/>
+                             <field name="accomodation_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+
+
+
+                    <group attrs="{'invisible' : [('state','!=', 'book')]}">
+
+                    </group>
+
+
+                    <footer>
+                        <button special="cancel" string="Cancel"/>
+                        <button name="search_destination" string="Hotels" type="object"
+                                class="oe_right oe_highlight"/>
+                        <button name="search_hotel" string="Detail Hotel" type="object"
+                                class="oe_right oe_highlight"/>
+                         <button name="hotel_add_room" string="Add Room" type="object"
+                                class="oe_right oe_highlight"/>
+                        <button name="validate" string="Search" type="object"
+                                class="oe_right oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!--Action wizard -->
+        <record model="ir.actions.act_window" id="be_reservation_wizard">
+            <field name="name">Booking Engine</field>
+            <field name="res_model">be.reservation</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_be_reservation_wizard"/>
+            <field name="target">new</field>
+        </record>
+
+        <!--result views -->
+        <record model="ir.ui.view" id="pms_besimulator_result_view">
+            <field name="name">Simulator Result</field>
+            <field name="model">be.result</field>
+            <field name="arch" type="xml">
+                <tree >
+                    <field name="room_type_id"/>
+                    <field name="availability"/>
+                    <field name="rate_plan_id"/>
+                    <field name="board_id"/>
+                    <field name="date"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="rule" />
+                    <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="pms_besimulator_result_search_view">
+            <field name="name">Result Search</field>
+            <field name="model">be.result</field>
+            <field name="arch" type="xml">
+                <search string="Search Results">
+                    <field name="room_type_id"/>
+                    <field name="rate_plan_id"/>
+                    <field name="board_id"/>
+
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_room_type_id" string="Room"
+                                domain="[]" context="{'group_by':'room_type_id'}"/>
+                        <filter name="group_by_rate_id" string="Rate"
+                                domain="[]" context="{'group_by':'rate_plan_id'}"/>
+                        <filter name="group_by_board_id" string="Board"
+                                domain="[]" context="{'group_by':'board_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+     <!-- submenu Accomodation -->
+        <menuitem name="Reservation" id="be_menu_reservation" parent="pms_be_data.be_menu_base_config" sequence="5" />
+
+        <menuitem id="be_reservation_menu" name="Booking engine"
+                  sequence="190" parent="be_menu_reservation" action="be_reservation_wizard"/>
+</odoo>

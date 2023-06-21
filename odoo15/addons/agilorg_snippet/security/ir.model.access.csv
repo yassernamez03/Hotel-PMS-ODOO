@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acl_room_type,hotel.room_type_default,model_hotel_room_type,,1,1,1,1
+acl_rooms,hotel.rooms_default,model_hotel_rooms,,1,1,1,1
+acl_room_feature,hotel.room.feature_default,model_hotel_room_feature,,1,1,1,1
+acl_room_taxes,hotel.room.taxes_default,model_hotel_room_taxes,,1,1,1,1
+acl_room_board,hotel.room_board_default,model_hotel_room_board,,1,1,1,1
+acl_room_manager,hotel.room_manager,model_hotel_rooms,group_manager,1,1,1,1
+

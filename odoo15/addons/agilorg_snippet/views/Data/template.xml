@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Rooms page -->
+	<template id="rooms">
+		<t t-call="website.layout">
+			<div class="oe_structure">
+				<section class="s_cover parallax s_parallax_is_fixed bg-black-50 pt96 pb96 o_colored_level" data-scroll-background-ratio="1">
+					<span class="s_parallax_bg oe_img_bg" style="background-image: url('agilorg_snippet\static\img\rooms.jpg'); background-position: 50% 0;">
+					</span>
+					<div class="o_we_bg_filter bg-black-50">
+					</div>
+					<div class="container s_allow_columns">
+						<h1 style="text-align: center;">
+							<font style="font-size: 62px; font-weight: bold;">
+								Our Rooms
+							</font>
+						</h1>
+					</div>
+				</section>
+			</div>
+			<div class="oe_structure">
+				<section class="s_three_columns o_cc o_cc2 pt32 pb32" data-vcss="001">
+					<div class="container">
+						<div class="row d-flex align-items-stretch">
+							<t t-foreach="rooms" t-as="room">
+								<t t-if="room.publish">
+									<div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+										<div class="card bg-white h-100">
+											<img class="card-img-top">
+												<span t-field="room.image" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+											</img>
+											<div class="card-body">
+												<h3 t-field="room.name" class="card-title" />
+												<p class="card-text">
+													<t t-set="description_length" t-value="199" />
+													<t t-set="truncated_description" t-value="room.description[:description_length]" />
+													<span>
+														<t t-esc="truncated_description" />
+														...
+													</span>
+													<a t-attf-href="/rooms/#{room.id}">
+														More
+														<i class="fa fa-long-arrow-right align-middle ms-1" />
+													</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</t>
+							</t>
+						</div>
+					</div>
+				</section>
+			</div>
+		</t>
+	</template>
+
+	<!-- Room Detail Page -->
+	<template id="room_detail" name="Rooms Detail">
+		<t t-call="website.layout">
+			<div class="oe_structure">
+				<section class="pt32 pb32 oe_custom_bg o_colored_level bg-secondary oe_img_bg o_bg_img_center" style="background-image: url(static\img\Snippets\check.jpg);">
+					<div class="text-center container">
+						<h1>
+							<font class="text-o-color-1">
+								More
+							</font>
+						</h1>
+					</div>
+					<input type="button" value="&#8249; BACK" onclick="history.go(-1)" style="float:left;margin:10px;color:white;width:70px;" class="btn btn-primary mb-2">
+					</input>
+				</section>
+				<section class="s_text_image pt32 pb32">
+					<div class="row align-items-center">
+						<div class="col-lg-6 pt16 pb16">
+							<div class="row s_nb_column_fixed">
+								<div class="col-lg-10 offset-lg-1 pb24 o_colored_level shadow" style="text-align: center;">
+									<section class="s_image_gallery o_slideshow s_image_gallery_show_indicators s_image_gallery_indicators_rounded pt24" data-vcss="001" data-columns="3" style="height: 500px; overflow: hidden;">
+										<div class="container">
+											<div id="slideshow_sample" class="carousel slide" data-ride="carousel" data-interval="0" style="margin: 0 12px;">
+												<div class="carousel-inner" style="padding: 0;">
+													<div class="carousel-item active">
+														<span t-field="room.image" class="img img-fluid d-block" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+													</div>
+													<div class="carousel-item">
+														<span t-field="room.image1" class="img img-fluid d-block" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+													</div>
+													<div class="carousel-item">
+														<span t-field="room.image2" class="img img-fluid d-block" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+													</div>
+												</div>
+												<ul class="carousel-indicators">
+													<li class="o_indicators_left text-center d-none" aria-label="Previous" title="Previous">
+														<i class="fa fa-chevron-left" />
+													</li>
+													<li data-target="#slideshow_sample" data-slide-to="0" class="active">
+														<span t-field="room.image" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+													</li>
+													<li data-target="#slideshow_sample" data-slide-to="1">
+														<span t-field="room.image1" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+													</li>
+													<li data-target="#slideshow_sample" data-slide-to="2">
+														<span t-field="room.image2" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+													</li>
+													<li class="o_indicators_right text-center d-none" aria-label="Next" title="Next">
+														<i class="fa fa-chevron-right" />
+													</li>
+												</ul>
+												<a class="carousel-control-prev o_we_no_overlay o_not_editable" href="#slideshow_sample" data-slide="prev" aria-label="Previous" title="Previous">
+													<span class="fa fa-chevron-left fa-2x text-white" />
+													<span class="sr-only">
+														Previous
+													</span>
+												</a>
+												<a class="carousel-control-next o_we_no_overlay o_not_editable" href="#slideshow_sample" data-slide="next" aria-label="Next" title="Next">
+													<span class="fa fa-chevron-right fa-2x text-white" />
+													<span class="sr-only">
+														Next
+													</span>
+												</a>
+											</div>
+										</div>
+									</section>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 jumbotron rounded pt32 pb32 ">
+							<h1 t-field="room.name" />
+							<hr />
+							<p class="lead" t-field="room.description" />
+							<hr />
+							<div>
+								<h3>
+									Room Features:
+								</h3>
+								<div class="features">
+									<t t-foreach="room.room_feature" t-as="feature">
+										<span t-field="feature.image" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+									</t>
+								</div>
+							</div>
+							<hr />
+							<div>
+								<h3 class="o_default_snippet_text">
+									Max Guests:
+									<t t-foreach="range(room.max_guests - 1)" t-as="guest">
+										<span>
+											<i class="fa fa-male">
+											</i>
+										</span>
+									</t>
+									<span>
+										<i>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height:20px;weight:10px;">
+												<!-- ! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+												<path d="M152 88a72 72 0 1 1 144 0A72 72 0 1 1 152 88zM39.7 144.5c13-17.9 38-21.8 55.9-8.8L131.8 162c26.8 19.5 59.1 30 92.2 30s65.4-10.5 92.2-30l36.2-26.4c17.9-13 42.9-9 55.9 8.8s9 42.9-8.8 55.9l-36.2 26.4c-13.6 9.9-28.1 18.2-43.3 25V288H128V251.7c-15.2-6.7-29.7-15.1-43.3-25L48.5 200.3c-17.9-13-21.8-38-8.8-55.9zm89.8 184.8l60.6 53-26 37.2 24.3 24.3c15.6 15.6 15.6 40.9 0 56.6s-40.9 15.6-56.6 0l-48-48C70 438.6 68.1 417 79.2 401.1l50.2-71.8zm128.5 53l60.6-53 50.2 71.8c11.1 15.9 9.2 37.5-4.5 51.2l-48 48c-15.6 15.6-40.9 15.6-56.6 0s-15.6-40.9 0-56.6L284 419.4l-26-37.2z">
+												</path>
+											</svg>
+										</i>
+									</span>
+								</h3>
+								<hr />
+								<p>
+									<a href="#" class="btn btn-primary mb-2">
+										Book Now
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</t>
+	</template>
+</odoo>

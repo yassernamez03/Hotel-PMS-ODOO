@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Rooms Check Page -->
+	<template id="rooms_avalibility" name="Rooms avalibility">
+		<t t-call="website.layout">
+			<div class="oe_structure">
+				<section class="s_cover parallax s_parallax_is_fixed bg-black-50 pt96 pb96 o_colored_level" data-scroll-background-ratio="1">
+					<span class="s_parallax_bg oe_img_bg" style="background-image: url('agilorg_snippet\static\Snippets\img\gallery.jpg'); background-position: 50% 0;">
+					</span>
+					<div class="o_we_bg_filter bg-black-50">
+					</div>
+					<div class="container s_allow_columns">
+						<h1 style="text-align: center;">
+							<font style="font-size: 62px; font-weight: bold;">
+								Rooms Available
+							</font>
+						</h1>
+					</div>
+				</section>
+			</div>
+			<div class="oe_structure">
+				<section class="s_media_list pt32 pb32 o_cc o_cc2 o_colored_level" data-snippet="room_card" data-name="Room Card" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip248170">
+					<div class="container">
+						<section class="s_text_image pt32 pb32 o_colored_level">
+							<div class="container">
+								<t t-foreach="rooms" t-as="room">
+									<div class="row align-items-center" data-original-title="" title="" aria-describedby="tooltip641626">
+										<div class="col-lg-6 pt16 pb16 o_colored_level" style="">
+											<section class="s_image_gallery o_slideshow o_colored_level pt0 s_image_gallery_show_indicators s_image_gallery_indicators_rounded s_image_gallery_indicators_arrows_rounded" data-vcss="001" data-columns="3" style="height: 500px; overflow: hidden; background-image: none;">
+												<div class="o_container_small">
+													<div id="slideshow_1684758076150" class="carousel slide" data-ride="carousel" data-interval="0" style="margin: 0 12px;">
+														<div class="carousel-inner" style="padding: 0;">
+															<div class="carousel-item" style="min-height: 500px;">
+																<span class="img img-fluid mx-auto" t-field="room.image" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+															</div>
+															<div class="carousel-item" style="min-height: 500px;">
+																<span class="img img-fluid mx-auto" t-field="room.image1" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+															</div>
+															<div class="carousel-item active" style="min-height: 500px;">
+																<span class="img img-fluid mx-auto" t-field="room.image2" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+															</div>
+														</div>
+														<a class="carousel-control-prev o_we_no_overlay o_not_editable" href="#slideshow_1684758076150" data-slide="prev" aria-label="Previous" title="Previous" contenteditable="false">
+															<span class="fa fa-chevron-left fa-2x text-white" contenteditable="false">
+															</span>
+															<span class="sr-only o_default_snippet_text">
+																Previous
+															</span>
+														</a>
+														<a class="carousel-control-next o_we_no_overlay o_not_editable" href="#slideshow_1684758076150" data-slide="next" aria-label="Next" title="Next" contenteditable="false">
+															<span class="fa fa-chevron-right fa-2x text-white" contenteditable="false" data-original-title="" title="" aria-describedby="tooltip458516">
+															</span>
+															<span class="sr-only o_default_snippet_text">
+																Next
+															</span>
+														</a>
+													</div>
+												</div>
+											</section>
+										</div>
+										<div class="pt16 pb16 o_colored_level col-lg-4">
+											<h2 class="o_default_snippet_text" t-field="room.name" />
+											<div class="card-body">
+												<p class="card-text">
+													<t t-set="description_length" t-value="99" />
+													<t t-set="truncated_description" t-value="room.description[:description_length]" />
+													<span>
+														<t t-esc="truncated_description" />
+														...
+													</span>
+													<a t-attf-href="/rooms/#{room.id}">
+														More
+														<i class="fa fa-long-arrow-right align-middle ms-1" />
+													</a>
+												</p>
+											</div>
+											<hr contenteditable="false" />
+											<p class="o_default_snippet_text">
+												Room Features:
+												<div class="features">
+													<t t-foreach="room.room_feature" t-as="feature">
+														<span t-field="feature.image" t-options="{'widget': 'image', 'class': 'mx-auto d-block img-thumbnail'}" />
+													</t>
+												</div>
+											</p>
+											<hr contenteditable="false" />
+											<div class="o_default_snippet_text">
+												Max Guests:
+												<span>
+													<t t-foreach="range(room.max_guests - 1)" t-as="guest">
+															<span style='font-size:30px'>
+																<i class="fa fa-male" style="height:20px;weight:10px;color:black;">
+																</i>
+															</span>
+													</t>
+												</span>
+												<span>
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height:20px;weight:10px;">
+														<path d="M152 88a72 72 0 1 1 144 0A72 72 0 1 1 152 88zM39.7 144.5c13-17.9 38-21.8 55.9-8.8L131.8 162c26.8 19.5 59.1 30 92.2 30s65.4-10.5 92.2-30l36.2-26.4c17.9-13 42.9-9 55.9 8.8s9 42.9-8.8 55.9l-36.2 26.4c-13.6 9.9-28.1 18.2-43.3 25V288H128V251.7c-15.2-6.7-29.7-15.1-43.3-25L48.5 200.3c-17.9-13-21.8-38-8.8-55.9zm89.8 184.8l60.6 53-26 37.2 24.3 24.3c15.6 15.6 15.6 40.9 0 56.6s-40.9 15.6-56.6 0l-48-48C70 438.6 68.1 417 79.2 401.1l50.2-71.8zm128.5 53l60.6-53 50.2 71.8c11.1 15.9 9.2 37.5-4.5 51.2l-48 48c-15.6 15.6-40.9 15.6-56.6 0s-15.6-40.9 0-56.6L284 419.4l-26-37.2z">
+														</path>
+													</svg>
+												</span>
+											</div>
+											<hr />
+										</div>
+										<div class="pt16 pb16 o_colored_level col-lg-2" data-quillbot-parent="DoS_Ckyhw23K1BVrOM5Uh">
+											<h2 class="o_default_snippet_text" style="float:right;">
+												<font>
+													<span t-field="room.price" />
+													<span t-field="room.currency_id" />
+												</font>
+											</h2>
+											<p style="float:right;font-size:19px;" class="">
+												Per night
+												<br />
+												Pre taxes
+											</p>
+											<a href="#" style="float:right;" type="button" class="s_donation_donate_btn btn btn-secondary btn-lg mb-2 o_default_snippet_text">
+												BOOK NOW
+											</a>
+										</div>
+									</div>
+								</t>
+							</div>
+						</section>
+					</div>
+				</section>
+			</div>
+		</t>
+	</template>
+</odoo>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--                     Res Country States                   -->
+        <record id="res_country_state_01" model="res.country.state">
+            <field name="code">01</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Tanger-Tétouan</field>
+        </record>
+        <record id="res_country_state_02" model="res.country.state">
+            <field name="code">02</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Gharb-Chrarda-Beni Hssen</field>
+        </record>
+        <record id="res_country_state_03" model="res.country.state">
+            <field name="code">03</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Taza-Al Hoceima-Taounate</field>
+        </record>
+        <record id="res_country_state_04" model="res.country.state">
+            <field name="code">04</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Oriental</field>
+        </record>
+        <record id="res_country_state_05" model="res.country.state">
+            <field name="code">05</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Fès-Boulemane</field>
+        </record>
+        <record id="res_country_state_06" model="res.country.state">
+            <field name="code">06</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Meknès-Tafilalet</field>
+        </record>
+        <record id="res_country_state_07" model="res.country.state">
+            <field name="code">07</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Rabat-Salé-Zemmour-Zaër</field>
+        </record>
+        <record id="res_country_state_08" model="res.country.state">
+            <field name="code">08</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Grand Casablanca</field>
+        </record>
+        <record id="res_country_state_09" model="res.country.state">
+            <field name="code">09</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Chaouia-Ouardigha</field>
+        </record>
+        <record id="res_country_state_10" model="res.country.state">
+            <field name="code">10</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Doukkala-Abda</field>
+        </record>
+        <record id="res_country_state_11" model="res.country.state">
+            <field name="code">11</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Marrakech-Tensift-Al Haouz</field>
+        </record>
+        <record id="res_country_state_12" model="res.country.state">
+            <field name="code">12</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Tadla-Azilal</field>
+        </record>
+        <record id="res_country_state_13" model="res.country.state">
+            <field name="code">13</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Souss-Massa-Drâa</field>
+        </record>
+        <record id="res_country_state_14" model="res.country.state">
+            <field name="code">14</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Guelmim-Es Smara</field>
+        </record>
+        <record id="res_country_state_15" model="res.country.state">
+            <field name="code">15</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Laâyoune-Boujdour-Sakia el Hamra</field>
+        </record>
+        <record id="res_country_state_16" model="res.country.state">
+            <field name="code">16</field>
+            <field name="country_id" ref="base.ma"/>
+            <field name="name">Oued Ed-Dahab-Lagouira</field>
+        </record>
+    </data>
+
+</odoo>

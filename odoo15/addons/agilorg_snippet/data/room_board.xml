@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="be_board_nb" model="hotel.room_board">
+			<field name="price">0</field>
+			<field name="code">BO</field>
+			<field name="name">Bed Only</field>
+			<field name="currency_id">MAD</field>
+		</record>
+
+		<record id="be_board_bb" model="hotel.room_board">
+			<field name="price">150</field>
+			<field name="code">BB</field>
+			<field name="name">Bed and Breakfast</field>
+			<field name="currency_id">MAD</field>
+		</record>
+
+		<record id="be_board_hb" model="hotel.room_board">
+			<field name="price">250</field>
+			<field name="code">HB</field>
+			<field name="name">Half Board</field>
+			<field name="currency_id">MAD</field>
+		</record>
+
+		<record id="be_board_fb" model="hotel.room_board">
+			<field name="price">500</field>
+			<field name="code">FB</field>
+			<field name="name">Full Board</field>
+			<field name="currency_id">MAD</field>
+		</record>
+
+		<record id="be_board_ai" model="hotel.room_board">
+			<field name="price">1000</field>
+			<field name="code">AI</field>
+			<field name="name">All Inclusive</field>
+			<field name="currency_id">MAD</field>
+		</record>
+
+	</data>
+
+</odoo>

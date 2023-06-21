@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="test_snippet" name="My snippet">
+		<section class="rooms">
+			<div class="card-left">
+			<div class="main-image">
+				<img src="/theme_snippet/static/img/Standard_Room/344397_IMG_ICG.webp" id='1'/>
+<!--				<img src="/theme_snippet/static/img/Standard_Room/std_img3.jpg" id='2'/>-->
+<!--				<img src="/theme_snippet/static/img/Standard_Room/std_img2.jpg" id='3'/>-->
+
+			</div>
+			</div>
+			<div class="card-right">
+				<h2>Standard Room</h2>
+				<h4>1390.00dh   <span> 1500.00dh</span></h4>
+				<p>Nice and cosy overlooking the lush mediterranean garden. It features a private patio with chairs and table and a confortable bathroom with shower and bath tub. Facilities include: plasma TV with SKY channels and pay-tv, DVD player, complimentary WI-FI, safe, minibar, air-conditioning, tea and cofee facilities, hair dryer, bathrobes, slippers and design toiletries.</p>
+
+				<button class="btn-cart">Book now</button>
+
+			</div>
+		</section>
+
+	</template>
+
+    <template id="product" inherit_id="website.snippets" name="Product">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_snippet.test_snippet" t-thumbnail="/theme_snippet/static/img/logo.png" />
+        </xpath>
+    </template>
+</odoo>

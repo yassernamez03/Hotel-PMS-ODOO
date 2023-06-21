@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+         <record id="be_taxes_tree_view" model="ir.ui.view">
+                <field name="name">be.taxes.tree</field>
+                <field name="model">be.taxes</field>
+                <field name="arch" type="xml">
+                    <tree string="Taxes">
+                        <field name="product_id" string="Product Tax"/>
+                        <field name="description"/>
+                        <field name="type"/>
+                        <field name="tax_rule"/>
+                        <field name="amount"/>
+                        <field name="percent"/>
+                        <field name="included_tax"/>
+                        <field name="currency_id"/>
+                    </tree>
+                </field>
+        </record>
+
+        <record id="be_taxes_form_view" model="ir.ui.view">
+            <field name="name">be.taxes.form</field>
+            <field name="model">be.taxes</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form string="Taxes">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Tax Name"/>
+                            </h1>
+                            <label for="code"/>
+                            <h5>
+                                <field name="code" placeholder="Tax Code"/>
+                            </h5>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="product_id" string="Product Tax"/>
+                                <field name="description"/>
+                                <field name="tax_rule"/>
+                                <field name="currency_id"/>
+                                <field name="included_tax"/>
+                            </group>
+                            <group>
+                                <field name="type"/>
+                                <field name="value"/>
+                            </group>
+                        </group>
+                 </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="be_taxes_action_window">
+            <field name="name">Taxes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">be.taxes</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

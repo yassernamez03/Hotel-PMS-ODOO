@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_be_reservation,be.reservation,model_be_reservation,pms_be_data.group_hotel_be,1,1,1,0
+access_be_reservation_line,be.reservation.line,model_be_reservation_line,pms_be_data.group_hotel_be,1,1,1,1
+access_be_reservation_extra,be.reservation.extra,model_be_reservation_extra,pms_be_data.group_hotel_be,1,1,1,0
+access_be_reservation_line_price,be.reservation.line.price,model_be_reservation_line_price,pms_be_data.group_hotel_be,1,1,1,0
+access_be_reservation_cc,be.reservation.cc,model_be_reservation_cc,pms_be_data.group_hotel_be,1,1,1,0
+access_be_result,be.result,model_be_result,pms_be_data.group_hotel_be,1,1,1,0

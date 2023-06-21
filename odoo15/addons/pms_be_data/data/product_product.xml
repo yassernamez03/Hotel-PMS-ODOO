@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+         <record id="product_product_accomodation" model="product.product">
+            <field name="name">Accommodation</field>
+            <field name="purchase_ok">False</field>
+            <field name="standard_price">0</field>
+            <field name="list_price">0</field>
+            <field name="detailed_type">service</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="default_code">ACCO</field>
+            <field name="categ_id" ref="product_category_accm"/>
+        </record>
+
+        <record id="product_product_city_taxe" model="product.product">
+            <field name="name">City Tax</field>
+            <field name="purchase_ok">False</field>
+            <field name="standard_price">0</field>
+            <field name="list_price">0</field>
+            <field name="detailed_type">service</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="default_code">CTX</field>
+            <field name="categ_id" ref="product_categ_city_taxe"/>
+        </record>
+
+        <record id="product_product_cancel_fee" model="product.product">
+            <field name="name">Cancellation fees</field>
+            <field name="purchase_ok">False</field>
+            <field name="standard_price">0</field>
+            <field name="list_price">0</field>
+            <field name="detailed_type">service</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="default_code">CFS</field>
+        </record>
+
+        <record id="product_product_breakfast" model="product.product">
+            <field name="name">Breakfast</field>
+            <field name="standard_price">0</field>
+            <field name="list_price">0</field>
+            <field name="detailed_type">service</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="default_code">BKST</field>
+            <field name="categ_id" ref="product_categ_boards"/>
+        </record>
+        <record id="product_product_lunch" model="product.product">
+            <field name="name">Lunch</field>
+            <field name="standard_price">0</field>
+            <field name="list_price">0</field>
+            <field name="detailed_type">service</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="default_code">LNCH</field>
+            <field name="categ_id" ref="product_categ_boards"/>
+        </record>
+        <record id="product_product_dinner" model="product.product">
+            <field name="name">Dinner</field>
+            <field name="standard_price">0</field>
+            <field name="list_price">0</field>
+            <field name="detailed_type">service</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="default_code">DNNR</field>
+            <field name="categ_id" ref="product_categ_boards"/>
+        </record>
+
+    </data>
+
+</odoo>

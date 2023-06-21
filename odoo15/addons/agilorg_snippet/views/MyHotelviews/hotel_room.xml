@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- hotel_room_type record -->
+    <record id='hotel_room_type_action' model='ir.actions.act_window'>
+        <field name="name">Hotel Room Type</field>
+        <field name="res_model">hotel.room_type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- room_features record -->
+    <record id='room_feature_action' model='ir.actions.act_window'>
+        <field name="name">Room Features</field>
+        <field name="res_model">hotel.room.feature</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- room_taxes record -->
+    <record id='room_taxes_action' model='ir.actions.act_window'>
+        <field name="name">Room Taxes</field>
+        <field name="res_model">hotel.room.taxes</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- hotel_rooms record -->
+    <record id='hotel_rooms_action' model='ir.actions.act_window'>
+        <field name="name">Hotel Rooms</field>
+        <field name="res_model">hotel.rooms</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+        <!-- room_board record -->
+    <record id='hotel_room_board_action' model='ir.actions.act_window'>
+        <field name="name">Hotel Room Board</field>
+        <field name="res_model">hotel.room_board</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="My Hotel" id="hotel_base_menu"/>
+    <menuitem name="Room Type" id="hotel_room_menu" parent="hotel_base_menu" action="hotel_room_type_action"/>
+    <menuitem name="Room Features" id="hotel_room_features_menu" parent="hotel_base_menu" action="room_feature_action"/>
+    <menuitem name="Room Taxes" id="hotel_room_taxes_menu" parent="hotel_base_menu" action="room_taxes_action"/>
+    <menuitem name="Rooms" id="hotel_rooms_menu" parent="hotel_base_menu" action="hotel_rooms_action"/>
+    <menuitem name="Meal Board Services" id="hotel_room_board_menu" parent="hotel_base_menu" action="hotel_room_board_action"/>
+
+
+    <!-- Form hotel room type View -->
+    <record id="hotel_room_type_view_form" model="ir.ui.view">
+        <field name="name">Hotel Room Type Form</field>
+        <field name="model">hotel.room_type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="image" widget='image' class="oe_avatar"/>
+                    <field name="image1" widget='image' class="oe_avatar"/>
+                    <field name="image2" widget='image' class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                <group>
+                    <group>
+                        <field name="max_guests"/>
+                        <field name="beds"/>
+                    </group>
+                    <group>
+                        <field name="price"/>
+                        <field name="currency_id" widget="selection"/>
+                    </group>
+                    <group>
+                        <field name="room_feature" widget="many2many_tags"/>
+                        <field name="publish" widget="boolean_toggle"/>
+                    </group>
+                    <group>
+                        <field name="room_taxes" widget="many2many_tags"/>
+                        
+                    </group>
+                </group>
+                <notebook>
+                    <page name="description" string="Description">
+                        <field name="description"/>
+                    </page>
+                </notebook>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Tree(list) hotel room type View -->
+    <record id="hotel_room_type_view_tree" model="ir.ui.view">
+        <field name="name">Hotel Room Type List</field>
+        <field name="model">hotel.room_type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search hotel room type View -->
+    <record id="hotel_room_type_view_search" model="ir.ui.view">
+        <field name="name">Hotel Room Type Search</field>
+        <field name="model">hotel.room_type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Form Features View -->
+    <record id="room_features_view_form" model="ir.ui.view">
+        <field name="name">Room Features Form</field>
+        <field name="model">hotel.room.feature</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="image" widget='image' class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                <notebook>
+                    <page name="description" string="Description">
+                        <field name="description"/>
+                    </page>
+                </notebook>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree(list) Features View -->
+    <record id="room_features_view_tree" model="ir.ui.view">
+        <field name="name">Room Features List</field>
+        <field name="model">hotel.room.feature</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search Features View -->
+    <record id="room_features_view_search" model="ir.ui.view">
+        <field name="name">Room Features Search</field>
+        <field name="model">hotel.room.feature</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Form Taxes View -->
+    <record id="be_taxes_form_view" model="ir.ui.view">
+        <field name="name">Room Taxes Form</field>
+        <field name="model">hotel.room.taxes</field>
+        <field name="arch" type="xml">
+            <form string="Taxes">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Tax Name"/>
+                        </h1>
+                        <label for="code"/>
+                        <h5>
+                            <field name="code" placeholder="Tax Code"/>
+                        </h5>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="tax_rule"/>
+                            <field name="currency_id"/>
+                        </group>
+                        <group>
+                            <field name="type"/>
+                            <field name="value"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="description" string="Description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+             </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree(list) Taxes View -->
+    <record id="be_taxes_tree_view" model="ir.ui.view">
+        <field name="name">Room Taxes Tree</field>
+        <field name="model">hotel.room.taxes</field>
+        <field name="arch" type="xml">
+            <tree string="Taxes">
+                <field name="name"/>
+                <field name="tax_rule"/>
+                <field name="value"/>
+                <field name="currency_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form rooms View -->
+    <record id="hotel_rooms_view_form" model="ir.ui.view">
+        <field name="name">Hotel Rooms Form</field>
+        <field name="model">hotel.rooms</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                <group>
+                    <group>
+                        <field name="room_id"/>
+                        <field name="room_type"/>
+                    </group>
+                    <group>
+                        <field name="status" widget="boolean_toggle"/>
+                        <field name="board_meal" widget="selection"/>
+                    </group>
+                </group>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Tree(list) rooms View -->
+    <record id="hotel_rooms_view_tree" model="ir.ui.view">
+        <field name="name">Hotel Rooms List</field>
+        <field name="model">hotel.rooms</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="room_type"/>
+                <field name="status" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search rooms View -->
+    <record id="hotel_rooms_view_search" model="ir.ui.view">
+        <field name="name">Hotel Rooms Search</field>
+        <field name="model">hotel.rooms</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Form view of hotel board service -->
+    <record model="ir.ui.view" id="view_be_board_form">
+        <field name="name">hotel.room_board.form</field>
+        <field name="model">hotel.room_board</field>
+        <field name="arch" type="xml">
+            <form string="Board Service">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                <group>
+                    <group>
+                        <field name="code"/>
+                    </group>
+                    <group>
+                        <field name="price"/>
+                        <field name="currency_id"/>
+                    </group>
+                </group>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Tree view of Meal Board Services-->
+    <record model="ir.ui.view" id="view_be_board_tree">
+        <field name="name">hotel.room_board.tree</field>
+        <field name="model">hotel.room_board</field>
+        <field name="arch" type="xml">
+            <tree string="List Meal Board Services">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

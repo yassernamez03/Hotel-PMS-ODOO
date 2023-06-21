@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- FORM availability -->
+    <record id="be_room_type_availability_view_form" model="ir.ui.view">
+        <field name="name">be.room.type.availability.form</field>
+        <field name="model">be.room.type.availability</field>
+        <field name="arch" type="xml">
+            <form string="Availability" create="0">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="date"/>
+                        </h1>
+                        <h2>
+                            <field name="room_type_id"/>
+                        </h2>
+                    </div>
+                    <group>
+                        <group name="data_availability" string="Availability">
+                            <field name="max_avail"/>
+                            <field name="quota"/>
+                            <field name="reserved"/>
+                            <label for="real_availability"/>
+                            <h1>
+                                <field name="real_availability" class=""/>
+                            </h1>
+                            <field name="stop_sale"/>
+                        </group>
+                    </group>
+
+                    <group groups="base.group_no_one">
+                        <field name="reserved_rooms">
+<!--                            <tree>-->
+<!--                                <field name="date"/>-->
+<!--                                <field name="room_type_id"/>-->
+<!--                                <field name="reservation"/>-->
+<!--                                <field name="reservation_state"/>-->
+<!--                                <field name="qty" sum="qty"/>-->
+<!--                            </tree>-->
+                        </field>
+
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+        <!-- PIVOT Availability -->
+    </record>
+
+    <record id="be_availability_view_pivot" model="ir.ui.view">
+        <field name="name">be.availability.pivot</field>
+        <field name="model">be.room.type.availability</field>
+        <field name="arch" type="xml">
+            <pivot string="availabilities" disable_linking="False">
+                <field name="hotel_name" type="row"/>
+                <field name="room_type_id" type="row"/>
+                <field name="date" interval="day" type="col"/>
+                <field name="real_availability" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- TREE Availability -->
+    <record id="be_room_type_availability_view_tree" model="ir.ui.view">
+        <field name="name">be.room.type.availability.tree</field>
+        <field name="model">be.room.type.availability</field>
+        <field name="arch" type="xml">
+            <tree string="Room Type Availability" create="0">
+                <field name="date"/>
+                <field name="be_hotel_id"/>
+                <field name="room_type_id"/>
+                <field name="max_avail"/>
+                <field name="quota"/>
+                <field name="reserved"/>
+                <field name="real_availability"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="be_room_type_availability_search_view" model="ir.ui.view">
+        <field name="name">be.room.type.availability.search.view</field>
+        <field name="model">be.room.type.availability</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="real_availability" string="Availability" domain="[('real_availability','>',0)]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter name="group_be_hotel_id" string="Accommodation" domain="[]"
+                            context="{'group_by':'be_hotel_id'}"
+                            help="Availability >0"/>
+                    <filter name="group_room_type_id" string="Room Type" domain="[]"
+                            context="{'group_by':'room_type_id'}"
+                            help="Availability >0"/>
+                    <filter name="group_date" string="Date" domain="[]" context="{'group_by':'date'}"
+                            help="Availability by Date"/>
+                </group>
+                <searchpanel>
+                    <field name="be_hotel_id" string="Accommodation" icon="fa-bed"/>
+                    <field name="room_type_id" string="Room" icon="fa-bed"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_be_availability_analysis" model="ir.actions.act_window">
+        <field name="name">Availability Analysis</field>
+        <field name="res_model">be.room.type.availability</field>
+        <field name="view_mode">form,tree,pivot</field>
+        <field name="view_id" ref="be_availability_view_pivot"/>
+    </record>
+</odoo>

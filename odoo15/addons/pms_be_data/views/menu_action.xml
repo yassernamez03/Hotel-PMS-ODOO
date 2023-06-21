@@ -1,0 +1,91 @@
+<odoo>
+    <data>
+
+         <menuitem id="be_menu_base_config" name="BE Data" web_icon="pms,static/description/icon-cog.png"/>
+         <!-- submenu Accomodation -->
+        <menuitem name="Accommodation" id="be_menu_accomodation" parent="be_menu_base_config" sequence="10" />
+
+        <menuitem name="Accommodations" id="be_menu_accomodation_action" parent="be_menu_accomodation"
+                  action="be_hotel_action_window" sequence="100"/>
+
+         <!-- menu Pricing configuration-->
+        <menuitem id="menu_pricing" name="Pricing"
+                  parent="be_menu_base_config" sequence="20" />
+
+        <record model="ir.actions.act_window" id="be_rate_plan_tree_form_view_action">
+            <field name="name">Rate Plan</field>
+            <field name="res_model">be.rate.plan</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                        (0, 0, {'view_mode': 'tree', 'view_id': ref('be_rate_plan_view_tree')}),
+                        (0, 0, {'view_mode': 'form', 'view_id': ref('be_rate_plan_view')}),
+                        ]"/>
+
+            <field name="search_view_id" ref="be_rate_plan_view_search"/>
+            <field name="context">{"default_base":'list_price'}</field>
+        </record>
+
+        <menuitem id="menu_be_pricing_plan_form_tree" name="Rate Plan"
+                  action="be_rate_plan_tree_form_view_action" sequence="200"
+                  parent="menu_pricing"/>
+         <menuitem id="menu_be_availability_form_tree" name="Availabilities"
+                  action="action_be_availability_analysis" sequence="210"
+                  parent="menu_pricing"/>
+
+        <menuitem id="be_configuration_menu" name="Configuration"
+                  sequence="90" parent="be_menu_base_config"/>
+
+        <!-- Action of  Board Services -->
+        <record id="action_be_board" model="ir.actions.act_window">
+            <field name="name">Board Services</field>
+            <field name="res_model">be.board</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_be_board_form_tree" name="Board Services"
+                  action="action_be_board" sequence="10"
+                  parent="be_configuration_menu"/>
+
+
+         <!-- Action for hotel room type  -->
+        <record id="be_hotel_room_type_form_tree" model="ir.actions.act_window">
+            <field name="name">Room Type</field>
+            <field name="res_model">be.room.type</field>
+            <field name="context">{}</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- Menu for room type -->
+        <menuitem id="be_room_type" name="Room Type"
+                  action="be_hotel_room_type_form_tree"
+                  parent="be_configuration_menu" sequence="20"/>
+
+
+        <!-- Action for taxes  -->
+        <record model="ir.actions.act_window" id="be_taxes_action_window">
+            <field name="name">Taxes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">be.taxes</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- Menu for Taxes  -->
+        <menuitem id="menu_be_taxes" name="Taxes"
+                  action="be_taxes_action_window" sequence="30"
+                  parent="be_configuration_menu"/>
+
+        <!-- Action partner district Tree/view-->
+        <record model="ir.actions.act_window" id="action_partner_district_view">
+            <field name="name">Partner District</field>
+            <field name="res_model">res.city.district</field>
+            <field name="view_id" ref="view_partner_district_tree"/>
+            <field name="view_mode">tree,form,search</field>
+        </record>
+
+        <!-- Menus partner district-->
+        <menuitem id="partner_district" name="Districts"
+                  sequence="40" action="action_partner_district_view"
+                  parent="be_configuration_menu"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Partner District -->
+    <record id="view_partner_district_tree" model="ir.ui.view">
+        <field name="name">Partner District Tree</field>
+        <field name="model">res.city.district</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <tree string="Partner District" editable="top">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="country_id"/>
+                <field name="city_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_partner_district_form" model="ir.ui.view">
+        <field name="name">Partner District Form</field>
+        <field name="model">res.city.district</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <form string="Partner District">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="country_id"/>
+                        <field name="city_id"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_partner_district_search" model="ir.ui.view">
+        <field name="name">Partner District Search</field>
+        <field name="model">res.city.district</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <search string="Partner District">
+                <field name="name"/>
+                <field name="country_id"/>
+                <field name="city_id"/>
+
+                <group string='Filters'>
+                    <filter domain="[]" string="name" name="name"/>
+                    <filter domain="[]" string="country_id" name="country_id"/>
+                    <filter domain="[]" string="city_id" name="city_id"/>
+
+                </group>
+                <group expand="0" string="Group By...">
+                    <filter name="name" string="name" icon="terp-personal" domain="[]"
+                            context="{'group_by':'name'}"/>
+                    <filter name="country_id" string="country_id" icon="terp-personal" domain="[]"
+                            context="{'group_by':'country_id'}"/>
+                    <filter name="city_id" string="city_id" icon="terp-personal" domain="[]"
+                            context="{'group_by':'city_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action partner district Tree/view-->
+    <record model="ir.actions.act_window" id="action_partner_district_view">
+        <field name="name">Partner District</field>
+        <field name="res_model">res.city.district</field>
+        <field name="view_id" ref="view_partner_district_tree"/>
+        <field name="view_mode">tree,form,search</field>
+    </record>
+
+
+    <!-- Menus partner district-->
+    <menuitem id="partner_district" name="Districts"
+              sequence="4" action="action_partner_district_view" parent="contacts.menu_localisation"/>
+
+</odoo>

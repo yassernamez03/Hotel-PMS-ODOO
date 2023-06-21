@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="snippet6" inherit_id="website.snippets" name="Snippet6">
+        <xpath expr="//*[@id='default_snippets']" position="before">
+            <t id="x_theme_snippets">
+                <div id="x_theme_snippets_category" class="o_panel">
+                    <div class="o_panel_header">AgilOrg_Snippets</div>
+                    <div class="o_panel_body">
+                        <t t-snippet="agilorg_snippet.s_media_list" t-thumbnail="agilorg_snippet/static/img/Snippets/logo.png" />
+                        <t t-snippet="agilorg_snippet.s_banner" t-thumbnail="agilorg_snippet/static/img/Snippets/logo.png" />
+                        <t t-snippet="agilorg_snippet.s_three_columns" t-thumbnail="agilorg_snippet/static/img/Snippets/logo.png" />
+                        <t t-snippet="agilorg_snippet.product_details" t-thumbnail="agilorg_snippet/static/img/Snippets/logo.png" />
+                        <t t-snippet="agilorg_snippet.s_image_gallery" t-thumbnail="agilorg_snippet/static/img/Snippets/logo.png" />
+                        <t t-snippet="agilorg_snippet.s_title" t-thumbnail="agilorg_snippet/static/img/Snippets/logo.png" />
+                        <t t-snippet="agilorg_snippet.s_cover" t-thumbnail="agilorg_snippet/static/img/Snippets/logo.png" />
+                        <t t-snippet="agilorg_snippet.check_availability" t-thumbnail="agilorg_snippet/static/img/Snippets/logo.png" />
+                        <t t-snippet="agilorg_snippet.room_card" t-thumbnail="agilorg_snippet/static/img/Snippets/logo.png" />
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

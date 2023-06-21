@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--======= Room Type ======= -->
+    <!--Form search of be room type-->
+      <record id="be_room_type_view_search" model="ir.ui.view">
+            <field name="name">be.room.type.search</field>
+            <field name="model">be.room.type</field>
+            <field name="arch" type="xml">
+                 <search string="BE Room Types">
+                    <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                    <searchpanel>
+                        <field name="be_hotel_id"/>
+                    </searchpanel>
+                     <group expand="0" string="Group By">
+                        <filter name="accommodation" string="Accomodation" icon="terp-personal"
+                             domain="[]" context="{'group_by':'be_hotel_id'}"/>
+                    </group>
+                </search>
+
+            </field>
+      </record>
+        <record id="view_be_room_type_tree" model="ir.ui.view">
+            <field name="name">be.room.type.tree</field>
+            <field name="model">be.room.type</field>
+            <field name="arch" type="xml">
+                <tree string="Room Types List">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="be_hotel_id"/>
+                    <field name="price_mode"/>
+                    <field name="min_occupancy"/>
+                    <field name="max_occupancy"/>
+                    <field name="room_count"/>
+                </tree>
+            </field>
+        </record>
+
+    <!-- Form view of Accomodation room type -->
+      <record model="ir.ui.view" id="view_be_room_type_form">
+            <field name="name">be.room.type.form</field>
+            <field name="model">be.room.type</field>
+            <field name="arch" type="xml">
+                <form string="Room Type">
+                    <header>
+                        <button class="oe_highlight" icon="fa-bed"
+                                type="object" name="generate_room_occupancy"
+                                string="Create Occupancies"
+                                confirm="Please, confirm the occupancy generation for this room ?"
+                        />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" default_focus="1" placeholder="Name"/>
+                            </h1>
+
+                        </div>
+                        <group col="4" colspan="2">
+                            <field name="be_hotel_id"/>
+                            <field name="code" placeholder="Code"/>
+                        </group>
+                        <group>
+                            <field name="default_availability" options='{"type": "number"}'/>
+                            <field name="room_count"/>
+                        </group>
+
+
+                        <notebook>
+                            <page string="Room Occupancies">
+                                   <group col="4" colspan="2">
+                                        <field name="price_mode"/>
+                                        <field name="default_board"/>
+                                        <field name="exclude_baby"/>
+                                   </group>
+                                   <group col="4">
+                                       <group>
+                                            <field name="price_adult"/>
+                                            <field name="min_adult"/>
+                                            <field name="max_adult"/>
+                                       </group>
+                                        <group>
+                                            <field name="price_child"/>
+                                            <field name="min_child"/>
+                                            <field name="max_child"/>
+                                         </group>
+                                        <group>
+                                             <field name="price_baby"/>
+                                             <field name="min_baby"/>
+                                             <field name="max_baby"/>
+                                       </group>
+                                       <group>
+                                             <field name="supplement_price"/>
+                                             <field name="min_occupancy"/>
+                                             <field name="max_occupancy"/>
+                                       </group>
+                                  </group>
+                                  <field name="room_occupancies_ids">
+                                       <tree name="room_occupancies_ids" editable="bottom">
+                                           <field name="name"/>
+                                           <field name="code"/>
+                                           <field name="occupancy_code"/>
+                                           <field name="is_default"/>
+                                           <field name="adult" options='{"type": "number"}'/>
+                                           <field name="child" options='{"type": "number"}'/>
+                                           <field name="baby" options='{"type": "number"}'/>
+                                           <field name="number_guests"/>
+                                        </tree>
+                                  </field>
+                               </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <record model="ir.actions.act_window" id="be_room_type_action_window">
+                <field name="name">Be Room Types</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">be.room.type</field>
+                <field name="view_mode">tree,form</field>
+                <field name="help" type="html">
+                    <p class="o_view_nocontent_smiling_face">
+                        No Record Found
+                    </p>
+                    <p>
+                        Click to add Booking Engine Room Type.
+                    </p>
+                </field>
+        </record>
+
+
+
+</odoo>

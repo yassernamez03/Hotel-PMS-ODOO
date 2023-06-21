@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+        <record id="res_partner_category_accommodation" model="res.partner.category">
+            <field name="name">Accommodations</field>
+            <field name="color" eval="2"/>
+        </record>
+        <record id="res_partner_category_guest" model="res.partner.category">
+            <field name="name">Guests</field>
+            <field name="color" eval="5"/>
+        </record>
+
+        <record id="res_partner_category_transport" model="res.partner.category">
+            <field name="name">Transports</field>
+            <field name="color" eval="3"/>
+        </record>
+        <record id="res_partner_category_restaurant" model="res.partner.category">
+            <field name="name">Restaurants</field>
+            <field name="color" eval="4"/>
+        </record>
+        <record id="res_partner_category_monument" model="res.partner.category">
+            <field name="name">Monuments</field>
+            <field name="color" eval="5"/>
+        </record>
+        <record id="res_partner_category_guide" model="res.partner.category">
+            <field name="name">Guide</field>
+            <field name="color" eval="7"/>
+        </record>
+        <record id="res_partner_category_formation" model="res.partner.category">
+            <field name="name">Learning</field>
+            <field name="color" eval="8"/>
+        </record>
+        <record id="res_partner_category_renter" model="res.partner.category">
+            <field name="name">Renters</field>
+            <field name="color" eval="10"/>
+        </record>
+         <record id="res_partner_category_platform" model="res.partner.category">
+            <field name="name">Platform</field>
+            <field name="color" eval="10"/>
+        </record>
+	</data>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="check_availability" name="Check Availability">
+		<section class="s_cover parallax s_parallax_is_fixed bg-black-50 pt96 pb96" data-scroll-background-ratio="1">
+			<span class="s_parallax_bg oe_img_bg" style="background-image: url('agilorg_snippet\static\img\check.jpg); background-position: 50% 0;" />
+			<div class="o_we_bg_filter bg-black-50" />
+			<div class="container s_allow_columns">
+				<h1 style="text-align: center;">
+					<font style="font-size: 62px; font-weight: bold;">
+						Book your dream room now 
+					</font>
+				</h1>
+				<p class="lead" style="text-align: center;" >pick the checkin date followed by the checkout data and enjoy</p>
+				<div class="lead" style="text-align: center;">
+					<div class="elem-group inlined">
+						<label for="checkin-date">
+							Check-in Date
+						</label>
+						<input type="date" id="checkin-date" name="checkin" />
+					</div>
+					<div class="elem-group inlined">
+						<label for="checkout-date">
+							Check-out Date
+						</label>
+						<input type="date" id="checkout-date" name="checkout" />
+					</div>
+				</div>
+				<p style="text-align: center;">
+					<a class="btn btn-primary mb-2" href="booking/rooms_check">
+						<t t-esc="cta_btn_text">
+							Check Rooms
+						</t>
+					</a>
+				</p>
+			</div>
+		</section>
+	</template>
+</odoo>

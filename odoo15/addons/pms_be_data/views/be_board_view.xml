@@ -1,0 +1,31 @@
+<odoo>
+    <!-- Form view of hotel board service -->
+    <record model="ir.ui.view" id="view_be_board_form">
+        <field name="name">be.board.form</field>
+        <field name="model">be.board</field>
+        <field name="arch" type="xml">
+            <form string="Board Service">
+                <group>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="price"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Tree view of Meal Board Services-->
+    <record model="ir.ui.view" id="view_be_board_tree">
+        <field name="name">be.board.tree</field>
+        <field name="model">be.board</field>
+        <field name="arch" type="xml">
+            <tree string="List Meal Board Services">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

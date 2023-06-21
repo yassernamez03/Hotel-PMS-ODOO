@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="res_districy_RAK_Gueliz" model="res.city.district">
+          <field name="code">Gueliz</field>
+          <field name="name">Gueliz</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_RAK" name="city_id" />
+        </record>
+        <record id="res_districy_RAK_Agdal" model="res.city.district">
+          <field name="code">Agdal</field>
+          <field name="name">Agdal</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_RAK" name="city_id" />
+        </record>
+        <record id="res_districy_RAK_Medina" model="res.city.district">
+          <field name="code">MED</field>
+          <field name="name">Médina</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_RAK" name="city_id" />
+        </record>
+        <record id="res_districy_RAK_EXT" model="res.city.district">
+          <field name="code">EXT</field>
+          <field name="name">Extérieur</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_RAK" name="city_id" />
+        </record>
+        <record id="res_districy_RAK_PALM" model="res.city.district">
+          <field name="code">PALM</field>
+          <field name="name">PALM</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_RAK" name="city_id" />
+        </record>
+        <record id="res_districy_RAK_Hivernage" model="res.city.district">
+          <field name="code">HIV</field>
+          <field name="name">Hivernage</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_RAK" name="city_id" />
+        </record>
+        <record id="res_districy_RAK_AQF" model="res.city.district">
+          <field name="code">AQF</field>
+          <field name="name">AQF</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_RAK" name="city_id" />
+        </record>
+        <record id="res_districy_AGA_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_AGA" name="city_id" />
+        </record>
+        <record id="res_districy_AGA_EXT" model="res.city.district">
+          <field name="code">EXT</field>
+          <field name="name">Extérieur</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_AGA" name="city_id" />
+        </record>
+        <record id="res_districy_ESS_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_ESS" name="city_id" />
+        </record>
+        <record id="res_districy_ZAT_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_ZAT" name="city_id" />
+        </record>
+        <record id="res_districy_FES_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_FES" name="city_id" />
+        </record>
+        <record id="res_districy_ERF_EXT" model="res.city.district">
+          <field name="code">EXT</field>
+          <field name="name">Extérieur</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_ERF" name="city_id" />
+        </record>
+        <record id="res_districy_CASA_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_CASA" name="city_id" />
+        </record>
+        <record id="res_districy_SKRA_PALM" model="res.city.district">
+          <field name="code">PALM</field>
+          <field name="name">Palmeraie</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_SKRA" name="city_id" />
+        </record>
+        <record id="res_districy_MERZ_DUN" model="res.city.district">
+          <field name="code">DUN</field>
+          <field name="name">Dunes</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_MERZ" name="city_id" />
+        </record>
+        <record id="res_districy_TAN_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_TAN" name="city_id" />
+        </record>
+        <record id="res_districy_CHAON_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_CHAON" name="city_id" />
+        </record>
+        <record id="res_districy_RBT_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_RBT" name="city_id" />
+        </record>
+        <record id="res_districy_TARD_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_TARD" name="city_id" />
+        </record>
+        <record id="res_districy_SDIA_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_SAADIA" name="city_id" />
+        </record>
+        <record id="res_districy_HCM_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_HCM" name="city_id" />
+        </record>
+        <record id="res_districy_OLDA_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_OLDA" name="city_id" />
+        </record>
+        <record id="res_districy_AZR_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_AZR" name="city_id" />
+        </record>
+        <record id="res_districy_FZGD_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_FZGD" name="city_id" />
+        </record>
+        <record id="res_districy_TING_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_TING" name="city_id" />
+        </record>
+        <record id="res_districy_KENI_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_KENI" name="city_id" />
+        </record>
+        <record id="res_districy_SIFN_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_SIFN" name="city_id" />
+        </record>
+        <record id="res_districy_TAF_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_TAF" name="city_id" />
+        </record>
+        <record id="res_districy_IMCH_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_IMCH" name="city_id" />
+        </record>
+        <record id="res_districy_MHA_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_MHA" name="city_id" />
+        </record>
+        <record id="res_districy_MEK_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_MEK" name="city_id" />
+        </record>
+        <record id="res_districy_DADS_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_DADS" name="city_id" />
+        </record>
+        <record id="res_districy_ZAG_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_ZAG" name="city_id" />
+        </record>
+        <record id="res_districy_IMLI_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_IMLI" name="city_id" />
+        </record>
+        <record id="res_districy_DAKH_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_DAKH" name="city_id" />
+        </record>
+        <record id="res_districy_MEL_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_MEL" name="city_id" />
+        </record>
+        <record id="res_districy_NADR_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_NADR" name="city_id" />
+        </record>
+        <record id="res_districy_FES_Medine" model="res.city.district">
+          <field name="code">MED</field>
+          <field name="name">Médina FES</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_FES" name="city_id" />
+        </record>
+        <record id="res_districy_RAK_CVL" model="res.city.district">
+          <field name="code">CVL</field>
+          <field name="name">Centre ville</field>
+          <field ref="base.ma" name="country_id" />
+          <field ref="res_city_RAK" name="city_id" />
+        </record>
+    </data>
+</odoo>

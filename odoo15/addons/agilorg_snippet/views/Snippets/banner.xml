@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_banner" name="Banner">
+        <section class="s_banner parallax s_parallax_is_fixed pt96 pb96 o_colored_level s_parallax_no_overflow_hidden o_half_screen_height" data-scroll-background-ratio="1" data-snippet="s_banner" data-name="Banner" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip887214">
+            <span class="s_parallax_bg oe_img_bg" style="background-image: url('agilorg_snippet/static/img/Snippets/showcase.jpg'); background-position: 50% 0;"></span>
+            <div class="container">
+              <div class="row s_nb_column_fixed">
+                <div class="col-lg-6 jumbotron rounded pt32 pb32 o_colored_level o_cc o_cc5 bg-black-50" data-name="Box" data-original-title="" title="" aria-describedby="tooltip608645" data-quillbot-parent="QDwyLkgnOT8EfdGs5yR9m" style="">
+                  <h1>
+                    <font style="font-size: 62px;">The Opulent Oasis:</font>
+                  </h1>
+                  <h1>
+                    <font style="font-size: 42px;">Where Luxury Knows No Bounds</font>
+                    <br/>
+                  </h1>
+                  <p class="lead">The Secret Oasis is a small luxury hotel offering personalized attention and intimate accommodations in a secluded area, with a spa and dining venue..</p>
+                  <a class="mb-2 btn btn-primary" data-original-title="" title="" data-gramm="false" wt-ignore-input="true" data-quillbot-element="QDwyLkgnOT8EfdGs5yR9m" href="/booking">Book Now</a>
+                  <quillbot-extension data-element-id="QDwyLkgnOT8EfdGs5yR9m" style="position: absolute; top: 0px; left: 0px; pointer-events: none;"></quillbot-extension>
+                  <quillbot-extension-highlights data-element-id="QDwyLkgnOT8EfdGs5yR9m" data-element-type="html" style="position: absolute; top: 0px; left: 0px; pointer-events: none;"></quillbot-extension-highlights>
+                </div>
+              </div>
+            </div>
+          </section>
+    </template>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="name">view_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='zip']" position="after">
+                    <div>
+                        <field name="district" class="oe_read_only"/>
+                    </div>
+                    <field name="district" placeholder="District"
+                           options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"
+                           attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" class="oe_edit_only"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

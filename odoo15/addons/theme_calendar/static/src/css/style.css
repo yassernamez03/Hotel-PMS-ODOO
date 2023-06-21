@@ -1,0 +1,14 @@
+section{
+  width: 1100px;
+  height: 450px;
+  background-color: #fff;
+  align_items:center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  gap: 10px;
+}
+img{
+  width: 100%;
+  display: block;
+}

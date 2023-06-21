@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Product Categories -->
+        <record id="product_category_accm" model="product.category">
+            <field name="name">Accommodation</field>
+        </record>
+        <record id="product_categ_boards" model="product.category">
+            <field name="name">Board</field>
+        </record>
+        <record id="product_categ_city_taxe" model="product.category">
+            <field name="name">City Tax</field>
+        </record>
+        <record id="product_category_fdbv" model="product.category">
+            <field name="name">Food and Beverages</field>
+        </record>
+        <record id="product_category_food" model="product.category">
+            <field name="name">Food</field>
+            <field name="parent_id" ref="product_category_fdbv"/>
+        </record>
+        <record id="product_category_bvrg" model="product.category">
+            <field name="name">Beverages</field>
+            <field name="parent_id" ref="product_category_fdbv"/>
+        </record>
+        <record id="product_category_sftb" model="product.category">
+            <field name="name">Soft Beverages</field>
+            <field name="parent_id" ref="product_category_bvrg"/>
+        </record>
+        <record id="product_category_alcb" model="product.category">
+            <field name="name">Alcoholic Beverages</field>
+            <field name="parent_id" ref="product_category_bvrg"/>
+        </record>
+        <record id="product_category_wlbe" model="product.category">
+            <field name="name">Well being</field>
+        </record>
+        <record id="product_category_hskp" model="product.category">
+            <field name="name">Well being</field>
+        </record>
+        <record id="product_category_trsp" model="product.category">
+            <field name="name">Transport</field>
+        </record>
+        <record id="product_category_extr" model="product.category">
+            <field name="name">Extras</field>
+        </record>
+
+    </data>
+</odoo>

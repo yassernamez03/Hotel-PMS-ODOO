@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template name="Product" id="s_media_list">
+		<section class="s_media_list pt32 pb32 o_cc o_cc2" data-vcss="001">
+			<div class="container">
+			<div class="row">
+			</div>
+				<div class="row s_nb_column_fixed s_col_no_bgcolor">
+					<div class="col-lg-12 s_media_list_item pt16 pb16" data-name="Media item">
+						<div class="row s_col_no_resize s_col_no_bgcolor g-0 align-items-center o_cc o_cc1">
+							<div class="col-lg-4 align-self-stretch s_media_list_img_wrapper">
+								<img src="/agilorg_snippet/static/img/Standard_Room/344397_IMG_ICG.webp" class="s_media_list_img h-100 w-100" alt="" />
+							</div>
+							<div class="col-lg-8 s_media_list_body">
+								<h2>
+									Standard room
+								</h2>
+								<p>
+									Nice and cosy overlooking the lush mediterranean garden...
+								</p>
+								<a href="product_details">
+									More Details
+									<i class="fa fa-long-arrow-right align-middle ms-1" />
+								</a>
+								<hr>
+								</hr>
+								<div class="col-lg-8 s_media_list_body">
+									<p>
+										Best offer available
+									</p>
+								</div>
+								<div class="col-lg-12 s_media_list_body" style="text-align: right;">
+									<h2>
+										MAD 2500
+									</h2>
+									<p>
+										Per nuit
+										<br />
+										Pre taxes
+									</p>
+									<a href="#" type="button" class="s_donation_donate_btn btn btn-secondary btn-lg mb-2 o_default_snippet_text">
+										BOOK NOW
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</template>
+</odoo>
